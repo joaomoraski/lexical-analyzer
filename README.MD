@@ -11,7 +11,9 @@ Atualmente minha versão do PHP 7.4.3, para melhores testes seria melhor baixar 
 [Instalação em Ambiente Linux](https://github.com/DanielHe4rt/php4noobs/blob/master/2-Ambiente/3-Ambiente-linux.md)
 #### Em ambiente MacOS
 [Instalação em Ambiente MacOS](https://github.com/DanielHe4rt/php4noobs/blob/master/2-Ambiente/4-Ambiente-macos.md)
-
+### Opcional
+Caso não funcione a instalação de algum dos links verifique a doc do proprio PHP<br>
+[Documentação do PHP](https://www.php.net/manual/pt_BR/install.php)
 # Para rodar o código
 Navegue até a pasta do projeto e execute o comando
 ```

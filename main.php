@@ -26,6 +26,8 @@ if ( file_exists( $arquivo ) ) {
 echo "Tamanho do vetor de tokens: " . count($token->tokens) . PHP_EOL;
 $i = 0;
 foreach($token->tokens as $token) {
-    echo "Token {$i}: " . $token . PHP_EOL;
+    echo "Token {$i}: " . $token . "\t\t";
     $i++;
+    if ($i%5 == 0) echo PHP_EOL;
 }
+echo PHP_EOL;
