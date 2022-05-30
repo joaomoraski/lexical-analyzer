@@ -15,6 +15,7 @@ if ( file_exists( $arquivo ) ) {
 
     // Faz o laço
     foreach ($handle as $linha) {
+        if ($linha[0] == '#') continue;
         // Lê uma linha do arquivo (se existir)
         $linhaAtual = $linha;
         $estados->setVariaveis(trim(strtolower($linhaAtual)), 0);
@@ -22,4 +23,9 @@ if ( file_exists( $arquivo ) ) {
     }
 }
 
-var_dump($token->tokens);
+echo "Tamanho do vetor de tokens: " . count($token->tokens) . PHP_EOL;
+$i = 0;
+foreach($token->tokens as $token) {
+    echo "Token {$i}: " . $token . PHP_EOL;
+    $i++;
+}

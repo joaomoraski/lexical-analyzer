@@ -12,3 +12,9 @@ Atualmente minha versão do PHP 7.4.3, para melhores testes seria melhor baixar 
 #### Em ambiente MacOS
 [Instalação em Ambiente MacOS](https://github.com/DanielHe4rt/php4noobs/blob/master/2-Ambiente/4-Ambiente-macos.md)
 
+# Para rodar o código
+Navegue até a pasta do projeto e execute o comando
+```
+php main.php
+```
+Os casos de testes estão no arquivo entrada.txt, caso queira comentar algo é so utilizar o # que ele ignora a linha em especifico.
