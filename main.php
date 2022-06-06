@@ -5,7 +5,7 @@ include("Estados.php");
 $token = new Token();
 $estados = new Estados();
 // Meu arquivo
-$arquivo = 'entrada.txt';
+$arquivo = $argv[1];
 
 // Verifica se o arquivo existe
 if ( file_exists( $arquivo ) ) {

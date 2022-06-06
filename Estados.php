@@ -247,6 +247,11 @@ class Estados
             $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
             $this->q35();
         }
+        // float
+        if ($this->caracterAtual == 'f') {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->q39();
+        }
         if (strpos(Token::$ALFABETO, $this->caracterAtual) !== false) {
             $this->qId();
         }
@@ -550,6 +555,71 @@ class Estados
         }
     }
     // while
+
+    // float
+    public function q39(): void
+    {
+        if ($this->caracterAtual == 'l') {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->q40();
+        }
+        if (strpos(Token::$ALFABETO, $this->caracterAtual) !== false) {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->qId();
+        }
+        if (strpos(Token::$NUMBERS, $this->caracterAtual) !== false) {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->qNumber();
+        }
+    }
+
+    public function q40(): void
+    {
+        if ($this->caracterAtual == 'o') {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->q41();
+        }
+        if (strpos(Token::$ALFABETO, $this->caracterAtual) !== false) {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->qId();
+        }
+        if (strpos(Token::$NUMBERS, $this->caracterAtual) !== false) {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->qNumber();
+        }
+    }
+
+    public function q41(): void
+    {
+        if ($this->caracterAtual == 'a') {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->q42();
+        }
+        if (strpos(Token::$ALFABETO, $this->caracterAtual) !== false) {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->qId();
+        }
+        if (strpos(Token::$NUMBERS, $this->caracterAtual) !== false) {
+            $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+            $this->qNumber();
+        }
+    }
+
+    public function q42(): void
+    {
+        if ($this->caracterAtual == 't') {
+            if ($this->proximoCaracter == ' ') {
+                $this->tokens[] = Token::$FLOAT;
+                $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 2);
+                return;
+            }
+            if (strpos(Token::$ALFABETO, $this->caracterAtual) !== false) {
+                $this->setVariaveis($this->linhaAtual, $this->indiceAtual + 1);
+                $this->qId();
+            }
+        }
+    }
+
 
     public function qNumber()
     {

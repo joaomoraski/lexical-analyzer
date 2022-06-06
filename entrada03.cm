@@ -1,0 +1,15 @@
+if (candidato1 >= candidato2){
+    if (candidato1 > candidato3){
+        if (candidato1 > candidato4){
+            candidato1+=branco;
+        } else{
+            candidato4 += branco;
+        }
+    } else if (candidato3 > candidato4){
+        candidato3+=branco;
+    } else{
+        candidato4+=branco;
+    }
+} else{
+    candidato2 += branco;
+}

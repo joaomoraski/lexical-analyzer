@@ -17,6 +17,10 @@ Caso não funcione a instalação de algum dos links verifique a doc do proprio 
 # Para rodar o código
 Navegue até a pasta do projeto e execute o comando
 ```
-php main.php
+php main.php nomeDoArquivo
+(inserir apenas 1 arquvio por vez)
+Se o arquivo estiver dentro de uma passa indicar o caminho
+Ex:
+    php main.php testes/teste-001.cm
 ```
 Os casos de testes estão no arquivo entrada.txt, caso queira comentar algo é so utilizar o # que ele ignora a linha em especifico.

@@ -7,6 +7,7 @@ class Token {
     public static $IF = 'IF';
     public static $ELSE = 'ELSE';
     public static $INT = 'INT';
+    public static $FLOAT = 'FLOAT';
     public static $RETURN = 'RETURN';
     public static $VOID = 'VOID';
     public static $WHILE = 'WHILE';
